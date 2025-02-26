@@ -22,6 +22,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         resultField = findViewById(R.id.result_field)
+        resultField.setText("0")
         val button1 = findViewById<Button>(R.id.button_1)
         val button2 = findViewById<Button>(R.id.button_2)
         val button3 = findViewById<Button>(R.id.button_3)
@@ -105,6 +106,7 @@ class MainActivity : AppCompatActivity() {
 
     }
     private fun Equality(){
+
         val secondNumber = resultField.text.toString().toDouble()
         val result = when (operation) {
             "+" -> firstNumber + secondNumber
